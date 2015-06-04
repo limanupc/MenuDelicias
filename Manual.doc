@@ -1,0 +1,15 @@
+comandos github 
+para crear un nuevo repositorio de git
+$ git init
+
+sube solo un archivo al index
+$ git add <archivo>
+
+sube todos los archivos al index
+$ git add .
+
+Incluir en el head
+$ git commit -m "Commit message"
+
+Envia cambios al escritorio remoto
+$ git push -u origin master
