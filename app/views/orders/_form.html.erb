@@ -1,0 +1,61 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Branch_id %><br>
+    <%= f.text_field :Branch_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Customer_id %><br>
+    <%= f.text_field :Customer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ped_fecha_solicitud %><br>
+    <%= f.date_select :ped_fecha_solicitud %>
+  </div>
+  <div class="field">
+    <%= f.label :ped_fecha_entrega %><br>
+    <%= f.date_select :ped_fecha_entrega %>
+  </div>
+  <div class="field">
+    <%= f.label :ped_hora_entrega %><br>
+    <%= f.time_select :ped_hora_entrega %>
+  </div>
+  <div class="field">
+    <%= f.label :ped_total %><br>
+    <%= f.text_field :ped_total %>
+  </div>
+  <div class="field">
+    <%= f.label :ped_estado %><br>
+    <%= f.number_field :ped_estado %>
+  </div>
+  <div class="field">
+    <%= f.label :perso_atendio %><br>
+    <%= f.number_field :perso_atendio %>
+  </div>
+  <div class="field">
+    <%= f.label :tipdoc_codigo %><br>
+    <%= f.number_field :tipdoc_codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :cor_serie %><br>
+    <%= f.text_field :cor_serie %>
+  </div>
+  <div class="field">
+    <%= f.label :ped_fecha_comprobante %><br>
+    <%= f.date_select :ped_fecha_comprobante %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

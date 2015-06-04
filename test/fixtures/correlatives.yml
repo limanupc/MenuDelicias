@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: correlatives
+#
+#  id               :integer          not null, primary key
+#  branch_id        :integer
+#  document_type_id :integer
+#  cor_serie        :string(255)
+#  cor_numero       :integer
+#  created_at       :datetime
+#  updated_at       :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  branch_id: 
+  document_type_id: 
+  cor_serie: MyString
+  cor_numero: 1
+
+two:
+  branch_id: 
+  document_type_id: 
+  cor_serie: MyString
+  cor_numero: 1

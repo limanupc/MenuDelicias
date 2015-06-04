@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @customer_address.Customer %>
+</p>
+
+<p>
+  <strong>Clidir direccion:</strong>
+  <%= @customer_address.clidir_direccion %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @customer_address.Location %>
+</p>
+
+<p>
+  <strong>Clidir referencia:</strong>
+  <%= @customer_address.clidir_referencia %>
+</p>
+
+<p>
+  <strong>Clidir telefono:</strong>
+  <%= @customer_address.clidir_telefono %>
+</p>
+
+<%= link_to 'Edit', edit_customer_address_path(@customer_address) %> |
+<%= link_to 'Back', customer_addresses_path %>

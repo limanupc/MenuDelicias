@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p style="font-size:4em;">Restaurante Delicias</p>
+
+    <%=  link_to 'Clientes', customers_path, :class => "cabecera" %>
+
+    
+<%= yield %>
+
+</body>
+</html>

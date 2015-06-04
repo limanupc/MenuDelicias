@@ -1,0 +1,29 @@
+<%= form_for(@week_program) do |f| %>
+  <% if @week_program.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@week_program.errors.count, "error") %> prohibited this week_program from being saved:</h2>
+
+      <ul>
+      <% @week_program.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :prosemmen_fecha %><br>
+    <%= f.date_select :prosemmen_fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :Branch_id %><br>
+    <%= f.text_field :Branch_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Product_id %><br>
+    <%= f.text_field :Product_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<%= form_for(@correlative) do |f| %>
+  <% if @correlative.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@correlative.errors.count, "error") %> prohibited this correlative from being saved:</h2>
+
+      <ul>
+      <% @correlative.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :branch_id %><br>
+    <%= f.text_field :branch_id %>
+  </div>
+  <div class="field">
+    <%= f.label :document_type_id %><br>
+    <%= f.text_field :document_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cor_serie %><br>
+    <%= f.text_field :cor_serie %>
+  </div>
+  <div class="field">
+    <%= f.label :cor_numero %><br>
+    <%= f.number_field :cor_numero %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

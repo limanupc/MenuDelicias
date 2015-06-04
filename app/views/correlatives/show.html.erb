@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Branch:</strong>
+  <%= @correlative.branch %>
+</p>
+
+<p>
+  <strong>Document type:</strong>
+  <%= @correlative.document_type %>
+</p>
+
+<p>
+  <strong>Cor serie:</strong>
+  <%= @correlative.cor_serie %>
+</p>
+
+<p>
+  <strong>Cor numero:</strong>
+  <%= @correlative.cor_numero %>
+</p>
+
+<%= link_to 'Edit', edit_correlative_path(@correlative) %> |
+<%= link_to 'Back', correlatives_path %>

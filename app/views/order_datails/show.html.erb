@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @order_datail.Order %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @order_datail.Product %>
+</p>
+
+<p>
+  <strong>Peddet cantidad:</strong>
+  <%= @order_datail.peddet_cantidad %>
+</p>
+
+<p>
+  <strong>Peddet precio:</strong>
+  <%= @order_datail.peddet_precio %>
+</p>
+
+<p>
+  <strong>Peddet sub total:</strong>
+  <%= @order_datail.peddet_sub_total %>
+</p>
+
+<%= link_to 'Edit', edit_order_datail_path(@order_datail) %> |
+<%= link_to 'Back', order_datails_path %>

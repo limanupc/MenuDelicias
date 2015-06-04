@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: week_programs
+#
+#  id              :integer          not null, primary key
+#  prosemmen_fecha :date
+#  Branch_id       :integer
+#  Product_id      :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prosemmen_fecha: 2015-06-02
+  Branch_id: 
+  Product_id: 
+
+two:
+  prosemmen_fecha: 2015-06-02
+  Branch_id: 
+  Product_id: 

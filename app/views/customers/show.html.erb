@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identity type:</strong>
+  <%= @customer.Identity_Type %>
+</p>
+
+<p>
+  <strong>Tipdocide numero:</strong>
+  <%= @customer.tipdocide_numero %>
+</p>
+
+<p>
+  <strong>Cli appaterno:</strong>
+  <%= @customer.cli_appaterno %>
+</p>
+
+<p>
+  <strong>Cli apmaterno:</strong>
+  <%= @customer.cli_apmaterno %>
+</p>
+
+<p>
+  <strong>Cli nombre:</strong>
+  <%= @customer.cli_nombre %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @customer.Sex %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Branch:</strong>
+  <%= @order.Branch %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @order.Customer %>
+</p>
+
+<p>
+  <strong>Ped fecha solicitud:</strong>
+  <%= @order.ped_fecha_solicitud %>
+</p>
+
+<p>
+  <strong>Ped fecha entrega:</strong>
+  <%= @order.ped_fecha_entrega %>
+</p>
+
+<p>
+  <strong>Ped hora entrega:</strong>
+  <%= @order.ped_hora_entrega %>
+</p>
+
+<p>
+  <strong>Ped total:</strong>
+  <%= @order.ped_total %>
+</p>
+
+<p>
+  <strong>Ped estado:</strong>
+  <%= @order.ped_estado %>
+</p>
+
+<p>
+  <strong>Perso atendio:</strong>
+  <%= @order.perso_atendio %>
+</p>
+
+<p>
+  <strong>Tipdoc codigo:</strong>
+  <%= @order.tipdoc_codigo %>
+</p>
+
+<p>
+  <strong>Cor serie:</strong>
+  <%= @order.cor_serie %>
+</p>
+
+<p>
+  <strong>Ped fecha comprobante:</strong>
+  <%= @order.ped_fecha_comprobante %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

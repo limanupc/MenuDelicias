@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ubi codigo:</strong>
+  <%= @location.ubi_codigo %>
+</p>
+
+<p>
+  <strong>Ubi departamento:</strong>
+  <%= @location.ubi_departamento %>
+</p>
+
+<p>
+  <strong>Ubi provincia:</strong>
+  <%= @location.ubi_provincia %>
+</p>
+
+<p>
+  <strong>Ubi distrito:</strong>
+  <%= @location.ubi_distrito %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

@@ -1,0 +1,17 @@
+# == Schema Information
+#
+# Table name: sexes
+#
+#  id              :integer          not null, primary key
+#  sex_descripcion :string(255)
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sex_descripcion: MyString
+
+two:
+  sex_descripcion: MyString

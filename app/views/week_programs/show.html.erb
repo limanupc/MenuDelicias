@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prosemmen fecha:</strong>
+  <%= @week_program.prosemmen_fecha %>
+</p>
+
+<p>
+  <strong>Branch:</strong>
+  <%= @week_program.Branch %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @week_program.Product %>
+</p>
+
+<%= link_to 'Edit', edit_week_program_path(@week_program) %> |
+<%= link_to 'Back', week_programs_path %>

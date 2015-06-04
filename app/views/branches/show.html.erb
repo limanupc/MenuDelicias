@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Suc nombre:</strong>
+  <%= @branch.suc_nombre %>
+</p>
+
+<p>
+  <strong>Suc direccion:</strong>
+  <%= @branch.suc_direccion %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @branch.location %>
+</p>
+
+<%= link_to 'Edit', edit_branch_path(@branch) %> |
+<%= link_to 'Back', branches_path %>

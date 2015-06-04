@@ -1,0 +1,21 @@
+<%= form_for(@identity_type) do |f| %>
+  <% if @identity_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@identity_type.errors.count, "error") %> prohibited this identity_type from being saved:</h2>
+
+      <ul>
+      <% @identity_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipdocide_descripcion %><br>
+    <%= f.text_field :tipdocide_descripcion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module WeekProgramsHelper
+end
