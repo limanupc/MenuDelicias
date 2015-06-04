@@ -1,4 +1,5 @@
 comandos github 
+----------------
 para crear un nuevo repositorio de git
 $ git init
 
