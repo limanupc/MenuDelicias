@@ -15,7 +15,6 @@ $ git commit -m "Commit message"
 Envia cambios al escritorio remoto
 $ git push -u origin master
 
-<<<<<<< HEAD
 CREAR BRANCH
 ----------------
 
@@ -44,11 +43,12 @@ origin  git@github.com:limanupc/MenuDelicias.git (fetch)
 origin  git@github.com:limanupc/MenuDelicias.git (push)
 
 
-Ubicar pid de ejecucion del proyecto
-=======
+http://rogerdudler.github.io/git-guide/index.es.html
+https://victorhckinthefreeworld.wordpress.com/2012/09/26/git-y-github-tutorial-basicode-uso-bajo-gnulinux/
+https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+http://stackoverflow.com/questions/22424142/error-your-local-changes-to-the-following-files-would-be-overwritten-by-checkou
 
-ubicar pid de ejecucion del proyecto
->>>>>>> e46d1a3d536834bd4acdab1d58be2c7284793e8d
+Ubicar pid de ejecucion del proyecto
 -----------------------------------
 $ lsof -i
 - luego ubicar el pid en Tools\Process list 
