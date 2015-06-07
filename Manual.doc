@@ -39,6 +39,15 @@ Subir Branch a github
 listar origen
 $ git remote -v 
 
+
+Eliminar Rama local
+git checkout master
+git branch -D PerfilCliente
+
+Eliminar Rama REmota
+git checkout master
+git push origin :PerfilCliente
+
 origin  git@github.com:limanupc/MenuDelicias.git (fetch)
 origin  git@github.com:limanupc/MenuDelicias.git (push)
 
