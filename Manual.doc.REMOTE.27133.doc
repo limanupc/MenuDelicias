@@ -1,0 +1,24 @@
+comandos github 
+----------------
+para crear un nuevo repositorio de git
+$ git init
+
+sube solo un archivo al index
+$ git add <archivo>
+
+sube todos los archivos al index
+$ git add .
+
+Incluir en el head
+$ git commit -m "Commit message"
+
+Envia cambios al escritorio remoto
+$ git push -u origin master
+
+
+ubicar pid de ejecucion del proyecto
+-----------------------------------
+$ lsof -i
+- luego ubicar el pid en Tools\Process list 
+- ubica el pid en process list, luego hacer clic en Force Kill
+  para matar el proceso 
