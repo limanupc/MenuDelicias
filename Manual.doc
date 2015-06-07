@@ -15,6 +15,7 @@ $ git commit -m "Commit message"
 Envia cambios al escritorio remoto
 $ git push -u origin master
 
+<<<<<<< HEAD
 CREAR BRANCH
 ----------------
 
@@ -44,6 +45,10 @@ origin  git@github.com:limanupc/MenuDelicias.git (push)
 
 
 Ubicar pid de ejecucion del proyecto
+=======
+
+ubicar pid de ejecucion del proyecto
+>>>>>>> e46d1a3d536834bd4acdab1d58be2c7284793e8d
 -----------------------------------
 $ lsof -i
 - luego ubicar el pid en Tools\Process list 
