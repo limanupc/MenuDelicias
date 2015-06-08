@@ -15,8 +15,49 @@ $ git commit -m "Commit message"
 Envia cambios al escritorio remoto
 $ git push -u origin master
 
+CREAR BRANCH
+----------------
 
-ubicar pid de ejecucion del proyecto
+Listar los branchs
+$ git branch
+* master
+
+Crear branch localmente e inmediatamente se cambia el uso a ella, en mi caso PerfilCliente.
+ (master) $ git checkout -b PerfilCliente
+
+
+Nuevamente listar los branchs para ver el creado.
+$ git branch
+
+* PerfilCliente
+  master
+
+Subir Branch a github
+(PerfilCliente) $ git push origin PerfilCliente
+ 
+ 
+listar origen
+$ git remote -v 
+
+
+Eliminar Rama local
+git checkout master
+git branch -D PerfilCliente
+
+Eliminar Rama REmota
+git checkout master
+git push origin :PerfilCliente
+
+origin  git@github.com:limanupc/MenuDelicias.git (fetch)
+origin  git@github.com:limanupc/MenuDelicias.git (push)
+
+
+http://rogerdudler.github.io/git-guide/index.es.html
+https://victorhckinthefreeworld.wordpress.com/2012/09/26/git-y-github-tutorial-basicode-uso-bajo-gnulinux/
+https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+http://stackoverflow.com/questions/22424142/error-your-local-changes-to-the-following-files-would-be-overwritten-by-checkou
+
+Ubicar pid de ejecucion del proyecto
 -----------------------------------
 $ lsof -i
 - luego ubicar el pid en Tools\Process list 
