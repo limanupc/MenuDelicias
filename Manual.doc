@@ -56,7 +56,7 @@ http://rogerdudler.github.io/git-guide/index.es.html
 https://victorhckinthefreeworld.wordpress.com/2012/09/26/git-y-github-tutorial-basicode-uso-bajo-gnulinux/
 https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 http://stackoverflow.com/questions/22424142/error-your-local-changes-to-the-following-files-would-be-overwritten-by-checkou
-
+http://lepidllama.net/blog/how-to-push-an-existing-cloud9-project-to-github/
 Ubicar pid de ejecucion del proyecto
 -----------------------------------
 $ lsof -i
