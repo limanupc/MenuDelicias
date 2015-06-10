@@ -1,37 +1,41 @@
 Rails.application.routes.draw do
   
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get 'home/index'
-
-  root "home#index"
-  
-  devise_for :users
-  
-  resources :order_datails
+  resources :order_details
 
   resources :orders
 
   resources :week_programs
 
-  resources :customer_addresses
-
-  resources :customers
-
-  resources :identity_types
-
-  resources :sexes
-
-  resources :branches
-
-  resources :categories
+  resources :customer_adresses
 
   resources :correlatives
+
+  resources :document_types
 
   resources :branches
 
   resources :locations
 
-  resources :document_types
+  resources :customers
+
+  resources :identity_types
+
+  resources :products
+
+  resources :sexes
+
+  resources :categories
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  
+  get 'home/index'
+  root "home#index"
+  
+  devise_for :users
+  
+  #resources :week_programs
+
+  #resources :branches
 
 
 

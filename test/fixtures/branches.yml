@@ -2,22 +2,22 @@
 #
 # Table name: branches
 #
-#  id            :integer          not null, primary key
-#  suc_nombre    :string(255)
-#  suc_direccion :string(255)
-#  location_id   :integer
-#  created_at    :datetime
-#  updated_at    :datetime
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  address     :string(255)
+#  Location_id :integer
+#  created_at  :datetime
+#  updated_at  :datetime
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  suc_nombre: MyString
-  suc_direccion: MyString
-  location_id: 
+  name: MyString
+  address: MyString
+  Location_id: 
 
 two:
-  suc_nombre: MyString
-  suc_direccion: MyString
-  location_id: 
+  name: MyString
+  address: MyString
+  Location_id: 

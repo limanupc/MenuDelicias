@@ -1,1 +1,1 @@
-json.extract! @branch, :id, :suc_nombre, :suc_direccion, :location_id, :created_at, :updated_at
+json.extract! @branch, :id, :name, :address, :Location_id, :created_at, :updated_at

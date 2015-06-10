@@ -2,16 +2,16 @@
 #
 # Table name: document_types
 #
-#  id                 :integer          not null, primary key
-#  tipdoc_descripcion :string(255)
-#  created_at         :datetime
-#  updated_at         :datetime
+#  id          :integer          not null, primary key
+#  description :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  tipdoc_descripcion: MyString
+  description: MyString
 
 two:
-  tipdoc_descripcion: MyString
+  description: MyString

@@ -2,13 +2,14 @@
 #
 # Table name: locations
 #
-#  id               :integer          not null, primary key
-#  ubi_codigo       :string(255)
-#  ubi_departamento :string(255)
-#  ubi_provincia    :string(255)
-#  ubi_distrito     :string(255)
-#  created_at       :datetime
-#  updated_at       :datetime
+#  id          :integer          not null, primary key
+#  ubi_codigo  :string(255)
+#  description :string(255)
+#  department  :string(255)
+#  province    :string(255)
+#  distric     :string(255)
+#  created_at  :datetime
+#  updated_at  :datetime
 #
 
 require 'test_helper'

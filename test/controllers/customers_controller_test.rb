@@ -18,7 +18,7 @@ class CustomersControllerTest < ActionController::TestCase
 
   test "should create customer" do
     assert_difference('Customer.count') do
-      post :create, customer: { Identity_Type_id: @customer.Identity_Type_id, Sex_id: @customer.Sex_id, cli_apmaterno: @customer.cli_apmaterno, cli_appaterno: @customer.cli_appaterno, cli_nombre: @customer.cli_nombre, tipdocide_numero: @customer.tipdocide_numero }
+      post :create, customer: { document_number: @customer.document_number, first_last_name: @customer.first_last_name, identity_type_id: @customer.identity_type_id, mail: @customer.mail, name: @customer.name, second_last_name: @customer.second_last_name, sex_id: @customer.sex_id }
     end
 
     assert_redirected_to customer_path(assigns(:customer))
@@ -35,7 +35,7 @@ class CustomersControllerTest < ActionController::TestCase
   end
 
   test "should update customer" do
-    patch :update, id: @customer, customer: { Identity_Type_id: @customer.Identity_Type_id, Sex_id: @customer.Sex_id, cli_apmaterno: @customer.cli_apmaterno, cli_appaterno: @customer.cli_appaterno, cli_nombre: @customer.cli_nombre, tipdocide_numero: @customer.tipdocide_numero }
+    patch :update, id: @customer, customer: { document_number: @customer.document_number, first_last_name: @customer.first_last_name, identity_type_id: @customer.identity_type_id, mail: @customer.mail, name: @customer.name, second_last_name: @customer.second_last_name, sex_id: @customer.sex_id }
     assert_redirected_to customer_path(assigns(:customer))
   end
 

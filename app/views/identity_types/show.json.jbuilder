@@ -1,1 +1,1 @@
-json.extract! @identity_type, :id, :tipdocide_descripcion, :created_at, :updated_at
+json.extract! @identity_type, :id, :description, :created_at, :updated_at

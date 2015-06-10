@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Prosemmen fecha:</strong>
-  <%= @week_program.prosemmen_fecha %>
+  <strong>Date:</strong>
+  <%= @week_program.date %>
 </p>
 
 <p>
@@ -13,6 +13,11 @@
 <p>
   <strong>Product:</strong>
   <%= @week_program.Product %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @week_program.quantity %>
 </p>
 
 <%= link_to 'Edit', edit_week_program_path(@week_program) %> |

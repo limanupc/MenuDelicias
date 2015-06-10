@@ -18,7 +18,7 @@ class CorrelativesControllerTest < ActionController::TestCase
 
   test "should create correlative" do
     assert_difference('Correlative.count') do
-      post :create, correlative: { branch_id: @correlative.branch_id, cor_numero: @correlative.cor_numero, cor_serie: @correlative.cor_serie, document_type_id: @correlative.document_type_id }
+      post :create, correlative: { Branch_id: @correlative.Branch_id, document_type_id: @correlative.document_type_id, number: @correlative.number, series: @correlative.series }
     end
 
     assert_redirected_to correlative_path(assigns(:correlative))
@@ -35,7 +35,7 @@ class CorrelativesControllerTest < ActionController::TestCase
   end
 
   test "should update correlative" do
-    patch :update, id: @correlative, correlative: { branch_id: @correlative.branch_id, cor_numero: @correlative.cor_numero, cor_serie: @correlative.cor_serie, document_type_id: @correlative.document_type_id }
+    patch :update, id: @correlative, correlative: { Branch_id: @correlative.Branch_id, document_type_id: @correlative.document_type_id, number: @correlative.number, series: @correlative.series }
     assert_redirected_to correlative_path(assigns(:correlative))
   end
 

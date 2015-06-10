@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: order_details
+#
+#  id         :integer          not null, primary key
+#  Order_id   :integer
+#  Product_id :integer
+#  quantity   :integer
+#  price      :integer
+#  partial    :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Order_id: 
+  Product_id: 
+  quantity: 1
+  price: 9.99
+  partial: 9.99
+
+two:
+  Order_id: 
+  Product_id: 
+  quantity: 1
+  price: 9.99
+  partial: 9.99

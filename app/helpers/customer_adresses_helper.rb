@@ -1,0 +1,2 @@
+module CustomerAdressesHelper
+end

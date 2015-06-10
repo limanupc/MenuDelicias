@@ -46,3 +46,10 @@ gem 'rails_admin'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Form generator
+gem 'simple_form'
+
+#Fronted framework
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'

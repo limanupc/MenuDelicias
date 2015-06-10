@@ -1,1 +1,1 @@
-json.extract! @document_type, :id, :tipdoc_descripcion, :created_at, :updated_at
+json.extract! @document_type, :id, :description, :created_at, :updated_at

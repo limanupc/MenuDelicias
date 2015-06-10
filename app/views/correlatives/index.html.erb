@@ -5,8 +5,8 @@
     <tr>
       <th>Branch</th>
       <th>Document type</th>
-      <th>Cor serie</th>
-      <th>Cor numero</th>
+      <th>Series</th>
+      <th>Number</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,10 +14,10 @@
   <tbody>
     <% @correlatives.each do |correlative| %>
       <tr>
-        <td><%= correlative.branch %></td>
+        <td><%= correlative.Branch %></td>
         <td><%= correlative.document_type %></td>
-        <td><%= correlative.cor_serie %></td>
-        <td><%= correlative.cor_numero %></td>
+        <td><%= correlative.series %></td>
+        <td><%= correlative.number %></td>
         <td><%= link_to 'Show', correlative %></td>
         <td><%= link_to 'Edit', edit_correlative_path(correlative) %></td>
         <td><%= link_to 'Destroy', correlative, method: :delete, data: { confirm: 'Are you sure?' } %></td>

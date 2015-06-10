@@ -18,7 +18,7 @@ class WeekProgramsControllerTest < ActionController::TestCase
 
   test "should create week_program" do
     assert_difference('WeekProgram.count') do
-      post :create, week_program: { Branch_id: @week_program.Branch_id, Product_id: @week_program.Product_id, prosemmen_fecha: @week_program.prosemmen_fecha }
+      post :create, week_program: { Branch_id: @week_program.Branch_id, Product_id: @week_program.Product_id, date: @week_program.date, quantity: @week_program.quantity }
     end
 
     assert_redirected_to week_program_path(assigns(:week_program))
@@ -35,7 +35,7 @@ class WeekProgramsControllerTest < ActionController::TestCase
   end
 
   test "should update week_program" do
-    patch :update, id: @week_program, week_program: { Branch_id: @week_program.Branch_id, Product_id: @week_program.Product_id, prosemmen_fecha: @week_program.prosemmen_fecha }
+    patch :update, id: @week_program, week_program: { Branch_id: @week_program.Branch_id, Product_id: @week_program.Product_id, date: @week_program.date, quantity: @week_program.quantity }
     assert_redirected_to week_program_path(assigns(:week_program))
   end
 

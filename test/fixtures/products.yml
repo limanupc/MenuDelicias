@@ -2,25 +2,25 @@
 #
 # Table name: products
 #
-#  id             :integer          not null, primary key
-#  category_id    :integer
-#  pro_nombre     :string(255)
-#  pro_comentario :string(255)
-#  pro_precio     :integer
-#  created_at     :datetime
-#  updated_at     :datetime
+#  id          :integer          not null, primary key
+#  category_id :integer
+#  name        :string(255)
+#  description :string(255)
+#  price       :integer
+#  created_at  :datetime
+#  updated_at  :datetime
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
   category_id: 
-  pro_nombre: MyString
-  pro_comentario: MyString
-  pro_precio: 9.99
+  name: MyString
+  description: MyString
+  price: 9.99
 
 two:
   category_id: 
-  pro_nombre: MyString
-  pro_comentario: MyString
-  pro_precio: 9.99
+  name: MyString
+  description: MyString
+  price: 9.99

@@ -3,9 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Sucursal</th>
-      <th>Direccion</th>
-      <th>Localidad</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Location</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,9 +13,9 @@
   <tbody>
     <% @branches.each do |branch| %>
       <tr>
-        <td><%= branch.suc_nombre %></td>
-        <td><%= branch.suc_direccion %></td>
-        <td><%= branch.location %></td>
+        <td><%= branch.name %></td>
+        <td><%= branch.address %></td>
+        <td><%= branch.Location %></td>
         <td><%= link_to 'Show', branch %></td>
         <td><%= link_to 'Edit', edit_branch_path(branch) %></td>
         <td><%= link_to 'Destroy', branch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,7 +26,4 @@
 
 <br>
 
-
 <%= link_to 'New Branch', new_branch_path %>
-
-

@@ -18,7 +18,7 @@ class DocumentTypesControllerTest < ActionController::TestCase
 
   test "should create document_type" do
     assert_difference('DocumentType.count') do
-      post :create, document_type: { tipdoc_descripcion: @document_type.tipdoc_descripcion }
+      post :create, document_type: { description: @document_type.description }
     end
 
     assert_redirected_to document_type_path(assigns(:document_type))
@@ -35,7 +35,7 @@ class DocumentTypesControllerTest < ActionController::TestCase
   end
 
   test "should update document_type" do
-    patch :update, id: @document_type, document_type: { tipdoc_descripcion: @document_type.tipdoc_descripcion }
+    patch :update, id: @document_type, document_type: { description: @document_type.description }
     assert_redirected_to document_type_path(assigns(:document_type))
   end
 

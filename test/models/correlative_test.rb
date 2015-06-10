@@ -3,10 +3,10 @@
 # Table name: correlatives
 #
 #  id               :integer          not null, primary key
-#  branch_id        :integer
+#  Branch_id        :integer
 #  document_type_id :integer
-#  cor_serie        :string(255)
-#  cor_numero       :integer
+#  series           :string(255)
+#  number           :integer
 #  created_at       :datetime
 #  updated_at       :datetime
 #

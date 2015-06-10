@@ -2,22 +2,25 @@
 #
 # Table name: week_programs
 #
-#  id              :integer          not null, primary key
-#  prosemmen_fecha :date
-#  Branch_id       :integer
-#  Product_id      :integer
-#  created_at      :datetime
-#  updated_at      :datetime
+#  id         :integer          not null, primary key
+#  date       :date
+#  Branch_id  :integer
+#  Product_id :integer
+#  quantity   :integer
+#  created_at :datetime
+#  updated_at :datetime
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  prosemmen_fecha: 2015-06-02
+  date: 2015-06-10
   Branch_id: 
   Product_id: 
+  quantity: 1
 
 two:
-  prosemmen_fecha: 2015-06-02
+  date: 2015-06-10
   Branch_id: 
   Product_id: 
+  quantity: 1

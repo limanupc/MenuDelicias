@@ -18,7 +18,7 @@ class IdentityTypesControllerTest < ActionController::TestCase
 
   test "should create identity_type" do
     assert_difference('IdentityType.count') do
-      post :create, identity_type: { tipdocide_descripcion: @identity_type.tipdocide_descripcion }
+      post :create, identity_type: { description: @identity_type.description }
     end
 
     assert_redirected_to identity_type_path(assigns(:identity_type))
@@ -35,7 +35,7 @@ class IdentityTypesControllerTest < ActionController::TestCase
   end
 
   test "should update identity_type" do
-    patch :update, id: @identity_type, identity_type: { tipdocide_descripcion: @identity_type.tipdocide_descripcion }
+    patch :update, id: @identity_type, identity_type: { description: @identity_type.description }
     assert_redirected_to identity_type_path(assigns(:identity_type))
   end
 

@@ -2,23 +2,24 @@
 #
 # Table name: orders
 #
-#  id                    :integer          not null, primary key
-#  Branch_id             :integer
-#  Customer_id           :integer
-#  ped_fecha_solicitud   :date
-#  ped_fecha_entrega     :date
-#  ped_hora_entrega      :time
-#  ped_total             :integer
-#  ped_estado            :integer
-#  perso_atendio         :integer
-#  tipdoc_codigo         :integer
-#  cor_serie             :string(255)
-#  ped_fecha_comprobante :date
-#  created_at            :datetime
-#  updated_at            :datetime
+#  id               :integer          not null, primary key
+#  Branch_id        :integer
+#  Customer_id      :integer
+#  date_application :date
+#  delivery_date    :date
+#  delivery_time    :time
+#  total            :integer
+#  flag             :string(255)
+#  staff            :string(255)
+#  Document_type_id :integer
+#  series           :string(255)
+#  date_voucher     :date
+#  created_at       :datetime
+#  updated_at       :datetime
 #
 
 class Order < ActiveRecord::Base
   belongs_to :Branch
   belongs_to :Customer
+  belongs_to :Document_type
 end

@@ -12,28 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :Identity_Type_id %><br>
-    <%= f.text_field :Identity_Type_id %>
+    <%= f.label :identity_type_id %><br>
+    <%= f.collection_select  :identity_type_id, IdentityType.all, :id, :description, :selected => @customer.identity_type_id %>
   </div>
   <div class="field">
-    <%= f.label :tipdocide_numero %><br>
-    <%= f.text_field :tipdocide_numero %>
+    <%= f.label :document_number %><br>
+    <%= f.text_field :document_number %>
   </div>
   <div class="field">
-    <%= f.label :cli_appaterno %><br>
-    <%= f.text_field :cli_appaterno %>
+    <%= f.label :first_last_name %><br>
+    <%= f.text_field :first_last_name %>
   </div>
   <div class="field">
-    <%= f.label :cli_apmaterno %><br>
-    <%= f.text_field :cli_apmaterno %>
+    <%= f.label :second_last_name %><br>
+    <%= f.text_field :second_last_name %>
   </div>
   <div class="field">
-    <%= f.label :cli_nombre %><br>
-    <%= f.text_field :cli_nombre %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :Sex_id %><br>
-    <%= f.text_field :Sex_id %>
+    <%= f.label :mail %><br>
+    <%= f.text_field :mail %>
+  </div>
+  <div class="field">
+    <%= f.label :sex_id %><br>
+    <%= f.collection_select  :sex_id, Sex.all, :id, :description, :selected => @customer.sex_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

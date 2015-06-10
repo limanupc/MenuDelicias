@@ -5,15 +5,15 @@
     <tr>
       <th>Branch</th>
       <th>Customer</th>
-      <th>Ped fecha solicitud</th>
-      <th>Ped fecha entrega</th>
-      <th>Ped hora entrega</th>
-      <th>Ped total</th>
-      <th>Ped estado</th>
-      <th>Perso atendio</th>
-      <th>Tipdoc codigo</th>
-      <th>Cor serie</th>
-      <th>Ped fecha comprobante</th>
+      <th>Date application</th>
+      <th>Delivery date</th>
+      <th>Delivery time</th>
+      <th>Total</th>
+      <th>Flag</th>
+      <th>Staff</th>
+      <th>Document type</th>
+      <th>Series</th>
+      <th>Date voucher</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,15 +23,15 @@
       <tr>
         <td><%= order.Branch %></td>
         <td><%= order.Customer %></td>
-        <td><%= order.ped_fecha_solicitud %></td>
-        <td><%= order.ped_fecha_entrega %></td>
-        <td><%= order.ped_hora_entrega %></td>
-        <td><%= order.ped_total %></td>
-        <td><%= order.ped_estado %></td>
-        <td><%= order.perso_atendio %></td>
-        <td><%= order.tipdoc_codigo %></td>
-        <td><%= order.cor_serie %></td>
-        <td><%= order.ped_fecha_comprobante %></td>
+        <td><%= order.date_application %></td>
+        <td><%= order.delivery_date %></td>
+        <td><%= order.delivery_time %></td>
+        <td><%= order.total %></td>
+        <td><%= order.flag %></td>
+        <td><%= order.staff %></td>
+        <td><%= order.Document_type %></td>
+        <td><%= order.series %></td>
+        <td><%= order.date_voucher %></td>
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>

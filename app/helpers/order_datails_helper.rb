@@ -1,2 +1,0 @@
-module OrderDatailsHelper
-end

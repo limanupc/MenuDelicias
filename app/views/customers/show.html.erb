@@ -2,32 +2,37 @@
 
 <p>
   <strong>Identity type:</strong>
-  <%= @customer.Identity_Type %>
+  <%= @customer.identity_type %>
 </p>
 
 <p>
-  <strong>Tipdocide numero:</strong>
-  <%= @customer.tipdocide_numero %>
+  <strong>Document number:</strong>
+  <%= @customer.document_number %>
 </p>
 
 <p>
-  <strong>Cli appaterno:</strong>
-  <%= @customer.cli_appaterno %>
+  <strong>First last name:</strong>
+  <%= @customer.first_last_name %>
 </p>
 
 <p>
-  <strong>Cli apmaterno:</strong>
-  <%= @customer.cli_apmaterno %>
+  <strong>Second last name:</strong>
+  <%= @customer.second_last_name %>
 </p>
 
 <p>
-  <strong>Cli nombre:</strong>
-  <%= @customer.cli_nombre %>
+  <strong>Name:</strong>
+  <%= @customer.name %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @customer.mail %>
 </p>
 
 <p>
   <strong>Sex:</strong>
-  <%= @customer.Sex %>
+  <%= @customer.sex %>
 </p>
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |

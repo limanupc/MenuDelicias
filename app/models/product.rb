@@ -2,13 +2,13 @@
 #
 # Table name: products
 #
-#  id             :integer          not null, primary key
-#  category_id    :integer
-#  pro_nombre     :string(255)
-#  pro_comentario :string(255)
-#  pro_precio     :integer
-#  created_at     :datetime
-#  updated_at     :datetime
+#  id          :integer          not null, primary key
+#  category_id :integer
+#  name        :string(255)
+#  description :string(255)
+#  price       :integer
+#  created_at  :datetime
+#  updated_at  :datetime
 #
 
 class Product < ActiveRecord::Base

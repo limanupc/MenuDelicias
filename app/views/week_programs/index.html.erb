@@ -3,9 +3,10 @@
 <table>
   <thead>
     <tr>
-      <th>Prosemmen fecha</th>
+      <th>Date</th>
       <th>Branch</th>
       <th>Product</th>
+      <th>Quantity</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,9 +14,10 @@
   <tbody>
     <% @week_programs.each do |week_program| %>
       <tr>
-        <td><%= week_program.prosemmen_fecha %></td>
+        <td><%= week_program.date %></td>
         <td><%= week_program.Branch %></td>
         <td><%= week_program.Product %></td>
+        <td><%= week_program.quantity %></td>
         <td><%= link_to 'Show', week_program %></td>
         <td><%= link_to 'Edit', edit_week_program_path(week_program) %></td>
         <td><%= link_to 'Destroy', week_program, method: :delete, data: { confirm: 'Are you sure?' } %></td>

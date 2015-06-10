@@ -1,13 +1,14 @@
-<h1>Clientes</h1>
+<h1>Listing customers</h1>
 
 <table>
   <thead>
     <tr>
       <th>Identity type</th>
-      <th>Tipdocide numero</th>
-      <th>Cli appaterno</th>
-      <th>Cli apmaterno</th>
-      <th>Cli nombre</th>
+      <th>Document number</th>
+      <th>First last name</th>
+      <th>Second last name</th>
+      <th>Name</th>
+      <th>Mail</th>
       <th>Sex</th>
       <th colspan="3"></th>
     </tr>
@@ -16,12 +17,13 @@
   <tbody>
     <% @customers.each do |customer| %>
       <tr>
-        <td><%= customer.Identity_Type.tipdocide_descripcion %></td>
-        <td><%= customer.tipdocide_numero %></td>
-        <td><%= customer.cli_appaterno %></td>
-        <td><%= customer.cli_apmaterno %></td>
-        <td><%= customer.cli_nombre %></td>
-        <td><%= customer.Sex.sex_descripcion %></td>
+        <td><%= customer.identity_type %></td>
+        <td><%= customer.document_number %></td>
+        <td><%= customer.first_last_name %></td>
+        <td><%= customer.second_last_name %></td>
+        <td><%= customer.name %></td>
+        <td><%= customer.mail %></td>
+        <td><%= customer.sex %></td>
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
