@@ -44,4 +44,6 @@ class LocationsController < ApplicationController
     def location_params
       params.require(:location).permit(:ubi_codigo, :description, :department, :province, :distric)
     end
+    
+    
 end

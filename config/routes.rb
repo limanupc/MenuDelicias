@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  #Sandro
   resources :order_details
 
   resources :orders
@@ -12,9 +12,12 @@ Rails.application.routes.draw do
 
   resources :document_types
 
-  resources :branches
 
-  resources :locations
+    resources :locations do
+    
+    resources :branches
+    
+    end
 
   resources :customers
 

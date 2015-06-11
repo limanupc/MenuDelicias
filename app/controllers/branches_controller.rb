@@ -1,6 +1,7 @@
 class BranchesController < ApplicationController
   before_action :set_branch, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_location
+  
   respond_to :html
 
   def index
@@ -44,4 +45,9 @@ class BranchesController < ApplicationController
     def branch_params
       params.require(:branch).permit(:name, :address, :Location_id)
     end
+    
+    def set_location
+      @location = Location.find(params[:location_id])
+    end
+    
 end
