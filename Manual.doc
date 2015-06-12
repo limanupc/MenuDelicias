@@ -63,3 +63,92 @@ $ lsof -i
 - luego ubicar el pid en Tools\Process list 
 - ubica el pid en process list, luego hacer clic en Force Kill
   para matar el proceso 
+  
+
+
+Agregar campos  a la tabla
+============================
+  --esto no agrega a las vistas ni al controlador. Solo agrega el campo en la tabla de la bd( es mas ni 
+  el annnote seagrega en el modelo) el nombre de la tabla lo jala por convencio por sobre coçnfiguracion.
+  
+  $: rails generate migration add_name_to_users name:string
+  
+Checa y Modifica el arhivo de Migration 
+Asegúrate que el archivo generate es correcto. Asegúrate de que se vea así:
+
+db/migrate/20140519054104_add_name_to_users.rb
+  
+ class AddNameToUsers < ActiveRecord::Migration
+  def change
+    add_column :users, :name, :string
+  end
+end
+
+es mas!! podemos modificar el archivo
+
+class AddNameToUsers < ActiveRecord::Migration
+  def change
+    add_column :users, :name, :string
+    add_column :users, :date_of_birth, :datetime
+    add_column :users, :is_female, :boolean, default: false
+  end
+end
+
+finallmente ejecutamos el comando 
+$ rake db:migrate
+
+
+CREANDO SEGUNDO DEVISE(Usercustomer)
+===========================
+
+rails g devise: install
+rails g devise Usercustomer
+
+
+
+--LIMPIAR BD
+
+class CrearCategorias < ActiveRecord::Migration
+  def up #change
+    create_table :categorias do |t|
+      t.string :nombre
+      t.timestamps
+    end
+  end
+
+  def down
+    drop_table :categorias
+  end
+
+// revertir la última migración
+$ rake db:rollback
+
+// revertir las últimas 4 migraciones
+$ rake db:rollback STEP=4
+
+// resetear la base de datos (borrar, crear y migrar)
+$ rake db:reset
+
+--TODO SOBRE MIGRACIONES
+http://www.rubyyyo.com/2012/10/migraciones-en-rails.html
+
+
+AGREGANDO CAMPOS CON ASOSIACION EN ARCHIVO DE MIGRACION
+=========================
+
+class AddColumnsToUsercustomers < ActiveRecord::Migration
+  
+  def change
+    
+    add_reference :usercustomers, :identity_type, index: true
+    add_column :usercustomers, :document_number, :string
+    add_column :usercustomers, :first_last_name, :string
+    add_column :usercustomers, :second_last_name, :string
+    add_column :usercustomers, :name, :string
+    add_reference :usercustomers, :sex, index: true
+    add_column :usercustomers, :cell, :string
+    add_column :usercustomers, :dateofbirth, :datetime
+    
+  end
+  
+end

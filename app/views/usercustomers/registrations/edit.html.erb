@@ -1,0 +1,63 @@
+<h2> Datos Personales </h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+     
+     <div class="field">
+    <%= f.label :identity_type_id %><br>
+    <%= f.collection_select  :identity_type_id, IdentityType.all, :id, :description, :selected => @usercustomer.identity_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :document_number %><br>
+    <%= f.text_field :document_number %>
+  </div>
+  <div class="field">
+    <%= f.label :first_last_name %><br>
+    <%= f.text_field :first_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :second_last_name %><br>
+    <%= f.text_field :second_last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sex_id %><br>
+    <%= f.collection_select  :sex_id, Sex.all, :id, :description, :selected => @usercustomer.sex_id %>
+  </div>
+  
+      <div class="field">
+    <%= f.label :cell %><br>
+    <%= f.text_field :cell %>
+  </div>
+  
+  
+   <div><%= f.label :dateofbirth %><br />
+        <%= f.date_select :dateofbirth %></div>
+  
+    <div> <%= f.input :email, required: true, autofocus: true %></div>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+    <% end %>
+
+    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+    <%= f.input :password_confirmation, required: false %>
+    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Update" %>
+  </div>
+<% end %>
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<%= link_to "Back", :back %>

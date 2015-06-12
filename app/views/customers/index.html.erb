@@ -1,5 +1,8 @@
 <h1>Listing customers</h1>
 
+
+
+
 <table>
   <thead>
     <tr>
@@ -10,6 +13,7 @@
       <th>Name</th>
       <th>Mail</th>
       <th>Sex</th>
+      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,6 +28,7 @@
         <td><%= customer.name %></td>
         <td><%= customer.mail %></td>
         <td><%= customer.sex %></td>
+        <td><%= customer.user_id %></td>
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

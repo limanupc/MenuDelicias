@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  devise_for :usercustomers
+  devise_for :installs
   resources :order_details
 
   resources :orders

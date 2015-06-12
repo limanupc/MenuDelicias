@@ -14,6 +14,9 @@ class CustomersController < ApplicationController
 
   def new
     @customer = Customer.new
+    
+    @customer.user_id = current_user.id
+    
     respond_with(@customer)
   end
 
@@ -42,6 +45,6 @@ class CustomersController < ApplicationController
     end
 
     def customer_params
-      params.require(:customer).permit(:identity_type_id, :document_number, :first_last_name, :second_last_name, :name, :mail, :sex_id)
+      params.require(:customer).permit(:identity_type_id, :document_number, :first_last_name, :second_last_name, :name, :mail, :sex_id, :user_id)
     end
 end

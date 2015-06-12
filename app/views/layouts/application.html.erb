@@ -53,6 +53,36 @@
             <li><%= link_to "Sucursal", "/path3"  %></li>
           </ul>
         </div>
+        
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <% if usercustomer_signed_in? %>
+          <ul class="nav navbar-nav">
+             <% if current_usercustomer.name.nil?  %>
+              <li>
+               <%= link_to(current_usercustomer.email , edit_usercustomer_registration_path) %>
+              </li>
+              <% else %>
+               <li>
+               <%= link_to("Hola " + current_usercustomer.name + "!" , edit_usercustomer_registration_path) %>
+              </li>
+              
+              <% end %>
+              <li>
+               <%= link_to('Edit registration', edit_usercustomer_registration_path) %>
+              </li>
+               
+               <li>
+              <%= link_to('Logout', destroy_usercustomer_session_path, :method => :delete) %>        
+              </li>
+          <% else %>
+              <li>
+              <%= link_to('Login', new_usercustomer_session_path)  %>  
+              </li>
+          </ul>
+        <% end %>
+         
+          </div>
+          
       </div>
     </div>
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150610005949) do
+ActiveRecord::Schema.define(version: 20150611183322) do
 
   create_table "branches", force: true do |t|
     t.string   "name"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20150610005949) do
     t.integer  "sex_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   add_index "customers", ["identity_type_id"], name: "index_customers_on_identity_type_id", using: :btree
@@ -80,6 +81,24 @@ ActiveRecord::Schema.define(version: 20150610005949) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "installs", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  add_index "installs", ["email"], name: "index_installs_on_email", unique: true, using: :btree
+  add_index "installs", ["reset_password_token"], name: "index_installs_on_reset_password_token", unique: true, using: :btree
 
   create_table "locations", force: true do |t|
     t.string   "ubi_codigo"
@@ -140,6 +159,34 @@ ActiveRecord::Schema.define(version: 20150610005949) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "usercustomers", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.integer  "identity_type_id"
+    t.string   "document_number"
+    t.string   "first_last_name"
+    t.string   "second_last_name"
+    t.string   "name"
+    t.integer  "sex_id"
+    t.string   "cell"
+    t.datetime "dateofbirth"
+  end
+
+  add_index "usercustomers", ["email"], name: "index_usercustomers_on_email", unique: true, using: :btree
+  add_index "usercustomers", ["identity_type_id"], name: "index_usercustomers_on_identity_type_id", using: :btree
+  add_index "usercustomers", ["reset_password_token"], name: "index_usercustomers_on_reset_password_token", unique: true, using: :btree
+  add_index "usercustomers", ["sex_id"], name: "index_usercustomers_on_sex_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
