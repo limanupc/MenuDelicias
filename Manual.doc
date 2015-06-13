@@ -1,3 +1,14 @@
+  	Mantenimiento
+Programador 	Simple 	Complejo
+Christians 	Sucursales 	Pedido
+Jesus 	Clientes 	Clientes - Perfil
+Luis 	Productos 	Programacion Semanal
+Sandro 	Correlativo 	Caja
+
+
+
+
+
 comandos github 
 ----------------
 para crear un nuevo repositorio de git
@@ -152,3 +163,37 @@ class AddColumnsToUsercustomers < ActiveRecord::Migration
   end
   
 end
+
+
+
+bootstrap
+--------------
+ 
+$ bundle
+$ rails g bootstrap:install less
+$ rails g bootstrap:layout application
+$ rails g simple_form:install –bootstrap
+  
+
+
+-- Ruta del Clone
+-------------------
+https://github.com/limanupc/MenuDelicias.git
+  
+  -- Backup
+===============================  
+  mysqldump -u root delicias_development > delicias.sql
+  
+===============================
+  mysql -u root
+  drop database delicias_development;
+  create database delicias_development;
+  
+  -- Restor
+====================  
+  mysql -u root delicias_development < delicias.sql
+  
+  
+
+
+  $ rails g bootstrap:themed <nombre_archivo>  
