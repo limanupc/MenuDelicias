@@ -51,8 +51,8 @@
             <li><%= link_to "Inicio", root_path  %></li>
           </ul>
           <div align="right">
-          <a href="#" class="btn btn-primary btn-sm active" role="button">Sucursal</a>
-          <a href="#" class="btn btn-primary btn-sm active" role="button">Administracion</a>          
+          <a href=<%= sucursal_index_path %> class="btn btn-primary btn-sm active" role="button">Sucursal</a>
+          <a href=<%= administracion_index_path %> class="btn btn-primary btn-sm active" role="button">Administracion</a>          
           </div>
         </div>
       </div>
@@ -94,7 +94,6 @@
       </div>
     
   
-    
       <!-- Controls -->
       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -105,11 +104,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  
-  
-  
-  
-  
+
   
     <div class="container">
       <div class="row">
@@ -117,17 +112,7 @@
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-        <div class="col-lg-3">
-          <div class="well sidebar-nav">
-            <h3>Sidebar</h3>
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
+        
       </div><!--/row-->
 
       <footer>
