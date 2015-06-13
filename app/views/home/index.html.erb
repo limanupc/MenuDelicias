@@ -1,21 +1,30 @@
-<%= link_to "Encuéntranos en", "www.menu-delicias.com/", :style => "margin-left:710px;" %>
+<%= link_to "Encuéntranos en", "www.menu-delicias.com/", :style => "margin-left:710px;"  %>
 <%= image_tag "facebook_logo.ico", :alt => "Facebook", :title => "Facebook" , :size => "20x20" %>
 
 <%= image_tag 'menu.jpg',:title => 'Menú', :size => "800x350", :style => "margin-left:50px; padding-bottom:15px;" %> 
 
-
-<frameset ROWS="65%,35%" FRAMEBORDER='5' FRAMESPACING='1'>
-
-    <% if @locations %>
-        <div>
-        <%= label_tag  "lbl_distrito", raw("Distrito") , :style => "margin-left:250px;" %>
-        <%= select_tag "cmb_distrito", options_from_collection_for_select(@locations, 'id', 'description', '1'), :style => "margin-left:18px;" %>
-        </div>
-        
-        <div>
-        <%= label_tag  "lbl_sucursal", raw("Sucursal") , :style => "margin-left:250px;" %>
-        <%= select_tag "cmb_distrito", options_from_collection_for_select(@locations, 'id', 'description', '1'), :style => "margin-left:10px;" %>
+    <% if @branches %>
+         <div>
+            <%= label_tag  "lbl_sucursal", raw("Sucursal") , :style => "margin-left:230px;" %>
+            <%= select_tag "cmb_sucursal", options_from_collection_for_select(@branches, 'id', 'name' , '1'), :style => "margin-left:10px;width:350px;" %>
         </div>        
     <% end %>
-    
-</frameset>
+
+<h1>Listing Productos</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Summary</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+    <% @branches.each do |branch| %>
+      <tr>
+        <td><%= branch.id %></td>
+        <td><%= branch.name %></td>
+      </tr>
+    <% end %>
+</table>

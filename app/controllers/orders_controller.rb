@@ -1,6 +1,9 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
+  #Restrict access to action for only valid users
+  before_action :authenticate_user!
+
   respond_to :html
 
   def index

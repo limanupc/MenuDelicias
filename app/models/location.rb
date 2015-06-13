@@ -13,6 +13,7 @@
 #
 
 class Location < ActiveRecord::Base
-    has_many :branches
+    has_many :branch, dependent: :destroy
     
+    validates :description, presence:true
 end

@@ -1,45 +1,56 @@
-<h1>Listing orders</h1>
-
-<table>
+<%- model_class = Order -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Branch</th>
-      <th>Customer</th>
-      <th>Date application</th>
-      <th>Delivery date</th>
-      <th>Delivery time</th>
-      <th>Total</th>
-      <th>Flag</th>
-      <th>Staff</th>
-      <th>Document type</th>
-      <th>Series</th>
-      <th>Date voucher</th>
-      <th colspan="3"></th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:Branch_id) %></th>
+      <th><%= model_class.human_attribute_name(:Customer_id) %></th>
+      <th><%= model_class.human_attribute_name(:date_application) %></th>
+      <th><%= model_class.human_attribute_name(:delivery_date) %></th>
+      <th><%= model_class.human_attribute_name(:delivery_time) %></th>
+      <th><%= model_class.human_attribute_name(:total) %></th>
+      <th><%= model_class.human_attribute_name(:flag) %></th>
+      <th><%= model_class.human_attribute_name(:staff) %></th>
+      <th><%= model_class.human_attribute_name(:Document_type_id) %></th>
+      <th><%= model_class.human_attribute_name(:series) %></th>
+      <th><%= model_class.human_attribute_name(:date_voucher) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-        <td><%= order.Branch %></td>
-        <td><%= order.Customer %></td>
+        <td><%= link_to order.id, order_path(order) %></td>
+        <td><%= order.Branch_id %></td>
+        <td><%= order.Customer_id %></td>
         <td><%= order.date_application %></td>
         <td><%= order.delivery_date %></td>
         <td><%= order.delivery_time %></td>
         <td><%= order.total %></td>
         <td><%= order.flag %></td>
         <td><%= order.staff %></td>
-        <td><%= order.Document_type %></td>
+        <td><%= order.Document_type_id %></td>
         <td><%= order.series %></td>
         <td><%= order.date_voucher %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l order.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_order_path(order), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      order_path(order),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Order', new_order_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_order_path,
+            :class => 'btn btn-primary' %>

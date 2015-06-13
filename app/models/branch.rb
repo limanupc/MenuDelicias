@@ -11,5 +11,7 @@
 #
 
 class Branch < ActiveRecord::Base
-  belongs_to :Location
+    belongs_to :Location
+    
+    validates :name, presence:true
 end

@@ -22,9 +22,9 @@ Rails.application.routes.draw do
 
   resources :identity_types
 
-  resources :products
-
   resources :sexes
+
+  resources :products
 
   resources :categories
 
