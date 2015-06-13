@@ -1,0 +1,14 @@
+<%= simple_form_for @correlative, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :Branch_id %>
+  <%= error_span(@correlative[:Branch_id]) %>
+  <%= f.input :document_type_id %>
+  <%= error_span(@correlative[:document_type_id]) %>
+  <%= f.input :series %>
+  <%= error_span(@correlative[:series]) %>
+  <%= f.input :number %>
+  <%= error_span(@correlative[:number]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                correlatives_path, :class => 'btn btn-default' %>
+<% end %>
