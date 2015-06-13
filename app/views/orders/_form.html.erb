@@ -1,6 +1,8 @@
-<%= simple_form_for @order, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :Branch_id %>
-  <%= error_span(@order[:Branch_id]) %>
+<%= simple_form_for @order, :html => { class: 'form-horizontal', multipart: true } do |f| %>
+
+  <%= f.association :branch, label_method: :name %>
+  <%= error_span(@order[:branch]) %>
+  
   <%= f.input :Customer_id %>
   <%= error_span(@order[:Customer_id]) %>
   <%= f.input :date_application %>

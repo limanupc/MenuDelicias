@@ -53,3 +53,6 @@ gem 'simple_form'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+
+#Attachment management
+gem 'paperclip', '~>4.2'

@@ -1,5 +1,5 @@
 <%= simple_form_for ([@product]), :html => { class: 'form-horizontal', multipart: true } do |f| %>
-
+ 
   <%= f.association :category, label_method: :description %>
 
   <%= error_span(@product[:category]) %>
@@ -10,6 +10,12 @@
   <%= error_span(@product[:description]) %>
   <%= f.input :price %>
   <%= error_span(@product[:price]) %>
+  
+  <%= f.input :picture, :as => :file, :hint => f.template.image_tag(f.object.picture.url(:thumb))  %>
+
+  <%= error_span(@product[:picture]) %>
+  
+  
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

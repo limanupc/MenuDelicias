@@ -19,7 +19,10 @@
 #
 
 class Order < ActiveRecord::Base
-  belongs_to :Branch
-  belongs_to :Customer
+  belongs_to :branch
+  belongs_to :customer
   belongs_to :Document_type
+  
+  has_many   :order_detail  
+  
 end

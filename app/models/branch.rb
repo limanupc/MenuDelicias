@@ -12,6 +12,7 @@
 
 class Branch < ActiveRecord::Base
     belongs_to :Location
+    belongs_to :order
     
     validates :name, presence:true
 end

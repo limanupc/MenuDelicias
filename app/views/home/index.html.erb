@@ -3,6 +3,13 @@
 
 <%= image_tag 'menu.jpg',:title => 'Menú', :size => "800x350", :style => "margin-left:50px; padding-bottom:15px;" %> 
 
+    <% if @locations %>
+         <div>
+            <%= label_tag  "lbl_ubicacion", raw("Ubicación") , :style => "margin-left:220px;" %>
+            <%= select_tag "cmb_ubicacion", options_from_collection_for_select(@locations, 'id', 'description' , '1'), :style => "margin-left:10px;width:350px;" %>
+        </div>        
+    <% end %>
+    
     <% if @branches %>
          <div>
             <%= label_tag  "lbl_sucursal", raw("Sucursal") , :style => "margin-left:230px;" %>

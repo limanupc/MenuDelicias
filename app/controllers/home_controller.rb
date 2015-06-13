@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @branches  = Branch.all
+    @locations = Location.all
+    @branches = Branch.all
   end
 end
