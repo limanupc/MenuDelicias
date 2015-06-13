@@ -15,3 +15,9 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+$('.carousel').carousel()
+
+$('#myCarousel').on('slide.bs.carousel', function () {
+  // do something…
+})

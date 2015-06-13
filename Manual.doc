@@ -21,7 +21,7 @@ sube todos los archivos al index
 $ git add .
 
 Incluir en el head
-$ git commit -m "Commit message"
+$ git commit -a -m "Commit message"
 
 Envia cambios al escritorio remoto
 $ git push -u origin master
@@ -166,20 +166,6 @@ end
 
 
 
-bootstrap
---------------
- 
-$ bundle
-$ rails g bootstrap:install less
-$ rails g bootstrap:layout application
-$ rails g simple_form:install –bootstrap
-  
-
-
--- Ruta del Clone
--------------------
-https://github.com/limanupc/MenuDelicias.git
-  
   -- Backup
 ===============================  
   mysqldump -u root delicias_development > delicias.sql
@@ -188,12 +174,58 @@ https://github.com/limanupc/MenuDelicias.git
   mysql -u root
   drop database delicias_development;
   create database delicias_development;
+
+
+========================================
+Para clonar la base de datos.
+========================================
+
+Ruta del Clone
+--------------
+https://github.com/limanupc/MenuDelicias.git
+
+bootstrap
+---------
+
+$ bundle
+$ rails g bootstrap:install less
+$ rails g bootstrap:layout application
+$ rails g simple_form:install –bootstrap
+
+Base de Datos
+-------------
+$ sudo service mysql start
+$ rake db:create
   
-  -- Restor
-====================  
-  mysql -u root delicias_development < delicias.sql
+Restaurar Base datos
+--------------------
+mysql -u root delicias_development < delicias.sql
   
-  
+Levantar el Servicio Web
+------------------------
+$ rails s -p $PORT -b $IP
 
 
   $ rails g bootstrap:themed <nombre_archivo>  
+  
+  
+  
+  
+  
+   <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="sandro">
+    </div>
+  </div>
+  
+  
+Most common form control, text-based input fields. Includes support for all HTML5 types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color.
+<input type="text" class="form-control" placeholder="Text input">
+
+
+<p class="bg-primary">...</p>
+<p class="bg-success">...</p>
+<p class="bg-info">...</p>
+<p class="bg-warning">...</p>
+<p class="bg-danger">...</p>
