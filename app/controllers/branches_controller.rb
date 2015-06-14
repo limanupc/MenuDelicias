@@ -45,3 +45,5 @@ class BranchesController < ApplicationController
       params.require(:branch).permit(:name, :address, :Location_id)
     end
 end
+
+

@@ -1,7 +1,9 @@
 class LocationsController < ApplicationController
-  before_action :set_location, only: [:show, :edit, :update, :destroy]
 
+ before_action :set_branch, only: [:show, :edit, :update, :destroy]
   respond_to :html
+
+
 
   def index
     @locations = Location.all
@@ -45,3 +47,4 @@ class LocationsController < ApplicationController
       params.require(:location).permit(:ubi_codigo, :description, :department, :province, :distric)
     end
 end
+
